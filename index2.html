@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="axios.js"></script>
+<script src="api.js"></script>
+<script src="prom.js"></script>
+
+<script>
+    // let pr1 = doAfter(4); // один промис
+    // let pr2 = doAfter(7); // второй промис
+    //
+    // pr1.then( () => console.log("pr1 resolved") ); // индивидуально подписываемся на каждый
+    // pr2.then( () => console.log("pr2 resolved") );
+    //
+    // let aggregatedPromise = Promise.all([pr1, pr2]); // получаем общий промис
+    //
+    // aggregatedPromise.then( () => console.log("pr1 and pr2 resolved")); // сработает наш подписчик ТОЛЬКО когда все промисы, переданные в массиве в all будут resolved
+
+   // const getRandomAfter = (seconds) => {
+   //     return new Promise( (resolve) => {
+   //         setTimeout(() => {
+   //
+   //             resolve(Math.random())
+   //         }, Math.floor(seconds * 1000) )
+   //     })
+   // }
+   //  let promises = [getRandomAfter(1),getRandomAfter(2), getRandomAfter(3)];
+   //  let commonPromise = Promise.all(promises);
+   //  commonPromise.then( (number) => {
+   //      // как вывести здесь все 3 числа?? гуглим Promise.all
+   //      console.log(number)
+   //  } );
+
+    console.log('1')
+    console.log('2')
+    let promise = new Promise( (resolve)=> {
+        console.log("3")
+        setTimeout( ()=> {
+            resolve()
+        }, 3000 )
+        console.log("4")
+    })
+    promise.then( ()=> {
+        console.log('5')
+    } )
+    console.log('6')
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
